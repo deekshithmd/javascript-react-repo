@@ -89,6 +89,34 @@ export const Polyfills = () => {
     const fn3 = obj3.fn.myBind(obj4)
     fn3('bengaluru'); // City bengaluru b 10
 
+    // DeepCopy
+    const deepCopy = (obj) => {
+        let result = {};
+        for (let key in obj) {
+            if (typeof obj[key] === 'object') {
+                result[key] = deepCopy(obj[key])
+            }
+            else {
+                result[key] = obj[key]
+            }
+        }
+        return result
+    }
+
+    const obj = {
+        a: 1,
+        b: 2,
+        c: {
+            d: 3,
+            e: 4,
+            f: {
+                g: 5
+            }
+        }
+    }
+
+    console.log("Deepy copy", deepCopy(obj))
+
     return (
         <h1>Polyfills</h1>
     )
