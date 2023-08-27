@@ -17,7 +17,8 @@ export default function Progress() {
     }, [progress]);
 
     return (
-        <div className="App">
+        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <h1>Progress Bar</h1>
             <button onClick={() => handleProgress()}>Progress</button>
             <div
                 style={{

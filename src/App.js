@@ -3,6 +3,8 @@ import Progress from './components/Progress';
 import Rating from './components/Rating';
 import { PromiseAll } from './components/PromiseAll';
 import { Polyfills } from './components/Polyfills';
+import { Debouncing } from './components/Debouncing';
+import { Throttling } from './components/Throttling';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Rating />
       <PromiseAll />
       <Polyfills />
+      <Debouncing />
+      <Throttling/>
     </div>
   );
 }

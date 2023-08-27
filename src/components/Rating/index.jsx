@@ -6,6 +6,7 @@ export default function Rating() {
     const [rating, setRating] = React.useState(0);
     return (
         <div>
+            <h1>Rating</h1>
             {Array(5)
                 .fill(0)
                 .map((item, index) => {
