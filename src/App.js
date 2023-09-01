@@ -5,6 +5,7 @@ import { PromiseAll } from './components/PromiseAll';
 import { Polyfills } from './components/Polyfills';
 import { Debouncing } from './components/Debouncing';
 import { Throttling } from './components/Throttling';
+import { ChessBoard } from './components/ChessBoard';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Polyfills />
       <Debouncing />
       <Throttling/>
+      <ChessBoard/>
     </div>
   );
 }
