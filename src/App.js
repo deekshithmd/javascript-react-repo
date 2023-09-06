@@ -6,6 +6,8 @@ import { Polyfills } from './components/Polyfills';
 import { Debouncing } from './components/Debouncing';
 import { Throttling } from './components/Throttling';
 import { ChessBoard } from './components/ChessBoard';
+import Component1 from './components/HigherOrderComponent/Component1';
+import Component2 from './components/HigherOrderComponent/Component2';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Debouncing />
       <Throttling/>
       <ChessBoard/>
+      <Component1/>
+      <Component2/>
     </div>
   );
 }

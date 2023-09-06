@@ -1,5 +1,4 @@
 import React from "react";
-import "./chess.css"
 
 export const ChessBoard = () => {
     // const Boxes = [...Array(8)].map(i => Array(8))
@@ -37,7 +36,9 @@ export const ChessBoard = () => {
                 }
             </div>
             {/* To prevent pasting */}
+            <label>Can't Paste here
             <input onPaste={(e)=>e.preventDefault()}/>
+            </label>
         </div >
     )
 
