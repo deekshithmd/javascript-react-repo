@@ -15,7 +15,7 @@ export const ChessBoard = () => {
     }, [])
 
     return (
-        <div>
+        <div style={{width:'100%' ,display:'flex', flexDirection:'column',alignItems:'center',margin:'30px 0px', border:'1px solid black'}}>
             <h1>ChessBoard</h1>
             <div style={{ height: '160px', width: '160px', border: '1px solid black' }}>
                 {
