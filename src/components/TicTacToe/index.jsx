@@ -4,7 +4,6 @@ import { Square } from "./Square";
 export const TicTacToe = () => {
     const [xIsNext, setXIsNext] = useState(true)
     const [squares, setSquares] = useState(Array(9).fill(null))
-    const [winner,setWinner]=useState('')
 
     const handleClick = (i) => {
         const nextSquares = squares.slice();
