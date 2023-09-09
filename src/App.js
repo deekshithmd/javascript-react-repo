@@ -9,6 +9,7 @@ import { ChessBoard } from './components/ChessBoard';
 import Component1 from './components/HigherOrderComponent/Component1';
 import Component2 from './components/HigherOrderComponent/Component2';
 import { TicTacToe } from './components/TicTacToe';
+import { DataStructures } from './components/DataStructures';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Component1/>
       <Component2/>
       <TicTacToe/>
+      <DataStructures/>
     </div>
   );
 }
