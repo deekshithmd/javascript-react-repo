@@ -11,12 +11,19 @@ class Queue {
         this.backIndex += 1;
     }
     dequeue() {
+        if (this.frontIndex === this.backIndex) {
+            return "UNDERFLOW"
+        }
+
         const item = this.items[this.frontIndex];
         delete this.items[this.frontIndex];
         this.frontIndex += 1;
         return item;
     }
     peak() {
+        if (this.frontIndex === this.backIndex) {
+            return "EMPTY QUEUE"
+        }
         return this.items[this.frontIndex]
     }
     printQueue() {
