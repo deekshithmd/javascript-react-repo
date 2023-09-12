@@ -28,6 +28,22 @@ class LinkedList {
         }
         this.size++;
     }
+    remove() {
+        console.log("data", this.head)
+        let prev = null;
+        let current = this.head;
+        if (current.next == null) {
+            console.log("List is empty")
+        }
+        else {
+            while (current.next) {
+                prev = current;
+                current = current.next;
+            }
+            prev.next = null;
+            console.log("removed", current.data)
+        }
+    }
     printList() {
         let current = this.head;
         let str = "";
@@ -40,10 +56,13 @@ class LinkedList {
 }
 
 export const LinkedListComponent = () => {
-    const list=new LinkedList();
+    const list = new LinkedList();
     list.add(3);
     list.add(5);
     list.add(8);
+    list.remove();
+    list.remove();
+    list.remove();
     list.printList();
     return <h1>LinkedList</h1>
 }
