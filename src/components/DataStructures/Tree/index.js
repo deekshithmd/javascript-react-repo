@@ -12,6 +12,13 @@ class Tree {
     constructor() {
         this.root = null;
     }
+    findMinNode(node) {
+        if (node.left == null) {
+            return node
+        }
+        else this.findMinNode(node.left)
+    }
+
     insert(data) {
         const node = new Node(data);
         if (this.root == null) {
@@ -39,14 +46,38 @@ class Tree {
             }
         }
     }
-    remove(data){
-        this.root=this.remoNode(this.root,data)
+    remove(data) {
+        this.root = this.removeNode(this.root, data)
     }
-    removNode(node,key){
-        if(node==null)
+    removeNode(node, key) {
+        if (node == null)
             return null;
-        else if(key<node.data){
-            
+        else if (key < node.data) {
+            node.left = this.removeNode(node.left, key)
+            return node;
+        }
+        else if (key > node.data) {
+            node.right = this.removeNode(node.right, key)
+            return node;
+        }
+        else {
+            if (node.left == null && node.right == null) {
+                node = null;
+                return node;
+            }
+            if (node.left == null) {
+                node = node.right;
+                return node;
+            }
+            else if (node.right == null) {
+                node = node.left;
+                return node;
+            }
+            const aux = this.findMinNode(node.right);
+            node.data = aux.data;
+
+            node.right = this.removeNode(node.data, aux.data);
+            return node;
         }
     }
     inorder(node) {
@@ -88,6 +119,7 @@ export const TreeComponent = () => {
     //    3    6
     //  2    5   8
     //1
+    tree.remove(2)
     const root = tree.getRootNode()
     console.log('inorder')
     tree.inorder(root);
