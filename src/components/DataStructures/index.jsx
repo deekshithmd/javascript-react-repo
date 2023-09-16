@@ -3,6 +3,7 @@ import { StackComponent } from "./Stack";
 import { QueueComponent } from "./Queue";
 import { LinkedListComponent } from "./LinkedList";
 import { TreeComponent } from "./Tree";
+import { GraphComponent } from "./Graph";
 
 export const DataStructures = () => {
   return (
@@ -11,6 +12,7 @@ export const DataStructures = () => {
       <QueueComponent />
       <LinkedListComponent />
       <TreeComponent />
+      <GraphComponent/>
     </>
   );
 };
