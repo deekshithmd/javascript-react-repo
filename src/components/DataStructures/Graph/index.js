@@ -26,6 +26,24 @@ class Graph {
             console.log(i + ' -> ' + result)
         }
     }
+
+    dfs(startingNode) {
+        let visited = {};
+        this.dfsUtil(startingNode, visited);
+    }
+    dfsUtil(vertex, visited) {
+        visited[vertex] = true;
+        console.log(vertex)
+        const neighbours = this.adjList.get(vertex);
+
+        for (let i in neighbours) {
+
+            let element = neighbours[i];
+            if (!visited[element]) {
+                this.dfsUtil(element, visited);
+            }
+        }
+    }
 }
 
 export const GraphComponent = () => {
@@ -43,7 +61,10 @@ export const GraphComponent = () => {
     graph.addEdge('E', 'C');
     graph.addEdge('C', 'F');
 
+    console.log("Print graph")
     graph.printGraph()
+    console.log('DFS')
+    graph.dfs('A')
 
     return <h1>Graph</h1>
 }
