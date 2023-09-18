@@ -10,6 +10,7 @@ import Component1 from './components/HigherOrderComponent/Component1';
 import Component2 from './components/HigherOrderComponent/Component2';
 import { TicTacToe } from './components/TicTacToe';
 import { DataStructures } from './components/DataStructures';
+import { ProblemSolving } from './components/Problem Solving';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Component2/>
       <TicTacToe/>
       <DataStructures/>
+      <ProblemSolving/>
     </div>
   );
 }
