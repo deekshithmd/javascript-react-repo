@@ -44,6 +44,9 @@ class Graph {
             }
         }
     }
+    bfs(startingNode){
+        
+    }
 }
 
 export const GraphComponent = () => {
