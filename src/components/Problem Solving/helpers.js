@@ -90,10 +90,10 @@ export const binarySearch = (arr, first, last, key) => {
     if (key === arr[mid])
         return mid
     else if (key < arr[mid]) {
-        return binarySearch(arr, start, mid-1, key) // O(logn)
+        return binarySearch(arr, start, mid - 1, key) // O(logn)
     }
     else {
-        return binarySearch(arr, mid+1, end, key)
+        return binarySearch(arr, mid + 1, end, key)
     }
 
 }
