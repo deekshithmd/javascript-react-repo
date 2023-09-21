@@ -6,7 +6,8 @@ import {
   powerOfTwo,
   linearSearch,
   binarySearch,
-  bubbleSort
+  bubbleSort,
+  insertionSort
 } from "./helpers";
 
 export const ProblemSolving = () => {
@@ -17,5 +18,6 @@ export const ProblemSolving = () => {
   console.log("Linear search: ", linearSearch([1, 2, 3, 4, 5], 2));
   console.log("Binary search: ", binarySearch([1, 2, 3, 4, 5], 0, 5, 4));
   console.log("Bubble sort: ",bubbleSort([7,9,3,6,4]))
+  console.log("Insertion sort: ",insertionSort([7,9,-5,6,4]))
   return <h1>Problem Solving</h1>;
 };
