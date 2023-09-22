@@ -124,3 +124,21 @@ export const insertionSort=(arr)=>{ //O(n^2)
     }
     return arr;
 }
+
+export const quickSort=(arr)=>{
+    let pivot=arr[arr.length-1];
+    let left=[], right=[]; //using extra space
+    if(arr.length<2){
+        return arr
+    }
+    for(let i=0;i<arr.length-1;i++){ // Worst case O(n^2), Avg case O(nlogn)
+        if(pivot>arr[i]){
+            left.push(arr[i])
+        }
+        else{
+            right.push(arr[i])
+        }
+    }
+    return [...quickSort(left),pivot,...quickSort(right)]
+
+}
