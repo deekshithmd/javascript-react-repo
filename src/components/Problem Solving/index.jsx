@@ -8,7 +8,8 @@ import {
   binarySearch,
   bubbleSort,
   insertionSort,
-  quickSort,
+  quickSort1,
+  quickSort2
 } from "./helpers";
 
 export const ProblemSolving = () => {
@@ -20,6 +21,7 @@ export const ProblemSolving = () => {
   console.log("Binary search: ", binarySearch([1, 2, 3, 4, 5], 0, 5, 4));
   console.log("Bubble sort: ", bubbleSort([7, 9, 3, 6, 4]));
   console.log("Insertion sort: ", insertionSort([7, 9, -5, 6, 4]));
-  console.log("Quicksort: ", quickSort([8, 2, 7, 3, 6, 4, 5]));
+  console.log("Quicksort using extra space: ", quickSort1([8, 2, 7, 3, 6, 4, 5]));
+  console.log("Quicksort inplace: ", quickSort2([8, 2, 7, 3, 6, 4, 5],0,6));
   return <h1>Problem Solving</h1>;
 };

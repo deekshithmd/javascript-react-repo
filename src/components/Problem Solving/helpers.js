@@ -112,33 +112,57 @@ export const bubbleSort = (arr) => {
     return arr
 }
 
-export const insertionSort=(arr)=>{ //O(n^2)
-    for(let i=1;i<arr.length;i++){
-        let key=arr[i];
-        let j=i-1;
-        while(key<arr[j] && j>=0){
-            arr[j+1]=arr[j];
-            j=j-1;
+export const insertionSort = (arr) => { //O(n^2)
+    for (let i = 1; i < arr.length; i++) {
+        let key = arr[i];
+        let j = i - 1;
+        while (key < arr[j] && j >= 0) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
         }
-        arr[j+1]=key;
+        arr[j + 1] = key;
     }
     return arr;
 }
 
-export const quickSort=(arr)=>{
-    let pivot=arr[arr.length-1];
-    let left=[], right=[]; //using extra space
-    if(arr.length<2){
+// Quicksort using extra space
+export const quickSort1 = (arr) => {
+    let pivot = arr[arr.length - 1];
+    let left = [], right = []; //using extra space
+    if (arr.length < 2) {
         return arr
     }
-    for(let i=0;i<arr.length-1;i++){ // Worst case O(n^2), Avg case O(nlogn)
-        if(pivot>arr[i]){
+    for (let i = 0; i < arr.length - 1; i++) { // Worst case O(n^2), Avg case O(nlogn)
+        if (pivot > arr[i]) {
             left.push(arr[i])
         }
-        else{
+        else {
             right.push(arr[i])
         }
     }
-    return [...quickSort(left),pivot,...quickSort(right)]
+    return [...quickSort1(left), pivot, ...quickSort1(right)]
 
+}
+
+//Quicksort inplace
+
+const partition = (arr, low, high) => {
+    let pivot = arr[high];
+    let i = low - 1;
+    for (let j = low; j <= high - 1; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            [arr[i], arr[j]] = [arr[j], arr[i]]
+        }
+    }
+    [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]]
+    return i + 1;
+}
+
+export const quickSort2 = (arr, low, high) => {
+    if (low < high) {
+        const pi = partition(arr, low, high);
+        quickSort2(arr, low, pi - 1)
+        quickSort2(arr, pi + 1, high)
+    }
 }
