@@ -166,3 +166,7 @@ export const quickSort2 = (arr, low, high) => {
         quickSort2(arr, pi + 1, high)
     }
 }
+
+export const mergeSort=(arr)=>{
+    
+}
