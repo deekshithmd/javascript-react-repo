@@ -9,7 +9,8 @@ import {
   bubbleSort,
   insertionSort,
   quickSort1,
-  quickSort2
+  quickSort2,
+  mergeSort1
 } from "./helpers";
 
 export const ProblemSolving = () => {
@@ -23,5 +24,6 @@ export const ProblemSolving = () => {
   console.log("Insertion sort: ", insertionSort([7, 9, -5, 6, 4]));
   console.log("Quicksort using extra space: ", quickSort1([8, 2, 7, 3, 6, 4, 5]));
   console.log("Quicksort inplace: ", quickSort2([8, 2, 7, 3, 6, 4, 5],0,6));
+  console.log("Mergesort using extra space: ", mergeSort1([8, 2, 7, -3, 6, 4, 5]));
   return <h1>Problem Solving</h1>;
 };
