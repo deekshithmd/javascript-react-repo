@@ -169,7 +169,7 @@ export const quickSort2 = (arr, low, high) => {
 
 const merge1 = (leftArr, rightArr) => {
     const sortedArr = [];
-    while (leftArr.length && rightArr.length) {
+    while (leftArr.length && rightArr.length) { //O(n)
         if (leftArr[0] <= rightArr[0]) {
             sortedArr.push(leftArr.shift())
         }
@@ -184,9 +184,9 @@ export const mergeSort1 = (arr) => {
     if (arr.length < 2) {
         return arr
     }
-    const mid = Math.floor(arr.length / 2);
+    const mid = Math.floor(arr.length / 2); // O(logn)
     const leftArr = arr.slice(0, mid);
     const rightArr = arr.slice(mid);
 
-    return merge1(mergeSort1(leftArr),mergeSort1(rightArr))
+    return merge1(mergeSort1(leftArr),mergeSort1(rightArr)) // Final O(nlogn)
 }
