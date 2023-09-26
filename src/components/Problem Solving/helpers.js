@@ -188,5 +188,16 @@ export const mergeSort1 = (arr) => {
     const leftArr = arr.slice(0, mid);
     const rightArr = arr.slice(mid);
 
-    return merge1(mergeSort1(leftArr),mergeSort1(rightArr)) // Final O(nlogn)
+    return merge1(mergeSort1(leftArr), mergeSort1(rightArr)) // Final O(nlogn)
+}
+
+export const getCartesian = (arr1, arr2) => {
+    const result = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            result.push([arr1[i], arr2[j]]) // O(m*n)
+        }
+    }
+    return result
 }
