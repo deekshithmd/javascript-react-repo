@@ -11,7 +11,9 @@ import {
   quickSort1,
   quickSort2,
   mergeSort1,
-  getCartesian
+  getCartesian,
+  climbingStairCase,
+  towerOfHenoi,
 } from "./helpers";
 
 export const ProblemSolving = () => {
@@ -23,9 +25,17 @@ export const ProblemSolving = () => {
   console.log("Binary search: ", binarySearch([1, 2, 3, 4, 5], 0, 5, 4));
   console.log("Bubble sort: ", bubbleSort([7, 9, 3, 6, 4]));
   console.log("Insertion sort: ", insertionSort([7, 9, -5, 6, 4]));
-  console.log("Quicksort using extra space: ", quickSort1([8, 2, 7, 3, 6, 4, 5]));
-  console.log("Quicksort inplace: ", quickSort2([8, 2, 7, 3, 6, 4, 5],0,6));
-  console.log("Mergesort using extra space: ", mergeSort1([8, 2, 7, -3, 6, 4, 5]));
-  console.log("Cartesian product of array",getCartesian([2,3],[1,4]))
+  console.log(
+    "Quicksort using extra space: ",
+    quickSort1([8, 2, 7, 3, 6, 4, 5])
+  );
+  console.log("Quicksort inplace: ", quickSort2([8, 2, 7, 3, 6, 4, 5], 0, 6));
+  console.log(
+    "Mergesort using extra space: ",
+    mergeSort1([8, 2, 7, -3, 6, 4, 5])
+  );
+  console.log("Cartesian product of array", getCartesian([2, 3], [1, 4]));
+  console.log("Climbing staircase", climbingStairCase(4));
+  console.log("Tower of Hanoi", towerOfHenoi(3, "A", "C", "B"));
   return <h1>Problem Solving</h1>;
 };

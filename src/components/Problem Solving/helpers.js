@@ -201,3 +201,26 @@ export const getCartesian = (arr1, arr2) => {
     }
     return result
 }
+
+export const climbingStairCase = (n) => {
+    // at a time 1 step or 2 steps
+    // 1 -> 1
+    // 2 -> (1,1),2
+    // 3 -> (1,1,1),(1,2),(2,1)
+    // 4 -> (1,1,1,1),(1,1,2),(1,2,1),(2,1,1),(2,2)
+    const noWays = [1, 2];
+    for (let i = 2; i <= n; i++) {
+        noWays[i] = noWays[i - 1] + noWays[i - 2]; // O(n)
+    }
+    return noWays[n - 1];
+}
+
+export const towerOfHenoi = (n, fromRod, toRod, usingRod) => {
+    if (n === 1) {
+        console.log(`Move disk 1 from ${fromRod} to ${toRod}`)
+        return
+    }
+    towerOfHenoi(n - 1, fromRod, usingRod, toRod);
+    console.log(`Move disk ${n} from ${fromRod} to ${toRod}`);
+    towerOfHenoi(n - 1, usingRod, toRod, fromRod);
+}
