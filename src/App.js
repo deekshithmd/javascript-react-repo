@@ -20,13 +20,13 @@ function App() {
       <PromiseAll />
       <Polyfills />
       <Debouncing />
-      <Throttling/>
-      <ChessBoard/>
-      <Component1/>
-      <Component2/>
-      <TicTacToe/>
-      <DataStructures/>
-      <ProblemSolving/>
+      <Throttling />
+      <ChessBoard />
+      <Component1 />
+      <Component2 />
+      <TicTacToe />
+      <DataStructures />
+      <ProblemSolving />
     </div>
   );
 }
