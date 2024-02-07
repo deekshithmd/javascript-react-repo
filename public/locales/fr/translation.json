@@ -1,0 +1,7 @@
+{
+  "greeting": "Bonjour, bienvenue! ",
+  "description": {
+    "line1": "bonjour comment allez-vous, <1>{{name}}</1>",
+    "line2": "comment va ta vie"
+  }
+}
