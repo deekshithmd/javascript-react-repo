@@ -12,6 +12,7 @@ import { TicTacToe } from "./components/TicTacToe";
 import { DataStructures } from "./components/DataStructures";
 import { ProblemSolving } from "./components/Problem Solving";
 import { Multilanguage } from "./components/Multilanguage";
+import { StepperComponent } from "./components/StepperComponent";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Component1 />
       <Component2 />
       <TicTacToe />
+      <StepperComponent />
       <DataStructures />
       <ProblemSolving />
     </div>

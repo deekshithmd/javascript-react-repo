@@ -1,0 +1,50 @@
+.stepper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+.step-number {
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: flex;
+    background-color: rgb(87, 89, 89);
+    align-items: center;
+    justify-content: center;
+}
+
+.complete .step-number {
+    background-color: rgb(52, 184, 52);
+    color: white
+}
+
+.active .step-number {
+    background-color: rgb(39, 116, 205);
+    color: white;
+}
+
+.progressbar {
+    position: absolute;
+    top: 25%;
+    left: 0px;
+    height: 4px;
+    background-color: rgb(99, 98, 97);
+}
+
+.progress {
+    height: 100%;
+    background-color: rgb(52, 184, 52);
+    transition: 0.2s ease;
+}
