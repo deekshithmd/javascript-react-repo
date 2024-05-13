@@ -8,8 +8,8 @@ export const Throttling = () => {
             const args = arguments;
             if (isSet) {
                 isSet = false;
-                fn.apply(context, args)
-                setInterval(() => isSet = true, delay)
+                fn.apply(context, args);
+                setInterval(() => isSet = true, delay);
             }
         }
     }

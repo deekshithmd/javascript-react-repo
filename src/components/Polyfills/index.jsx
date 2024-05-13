@@ -117,7 +117,21 @@ export const Polyfills = () => {
 
     console.log("Deepy copy", deepCopy(obj))
 
+    // Currying sum(a)(b)(c)();
+
+    const currySum = function (a) {
+        return function (b) {
+            if (b) {
+                return currySum(a + b);
+            }
+            return a;
+        }
+    }
+
+    console.log('sum in currying', currySum(1)(2)(3)())
+
     return (
         <h1>Polyfills</h1>
     )
 }
+

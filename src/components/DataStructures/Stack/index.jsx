@@ -8,6 +8,7 @@ class Stack {
     push(v) {
         this.items.push(v)
     }
+
     pop() {
         if (this.items.length === 0) {
             return "UNDERFLOW"
@@ -16,6 +17,7 @@ class Stack {
             return this.items.pop()
         }
     }
+
     isEmpty() {
         if (this.items.length === 0) {
             return true;

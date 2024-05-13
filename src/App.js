@@ -13,11 +13,15 @@ import { DataStructures } from "./components/DataStructures";
 import { ProblemSolving } from "./components/Problem Solving";
 import { Multilanguage } from "./components/Multilanguage";
 import { StepperComponent } from "./components/StepperComponent";
+import { FilExplorer } from "./components/FileExplorer";
+import { DragAndDrop } from "./components/DragAndDrop";
 
 function App() {
   return (
     <div className="App">
       <Multilanguage />
+      <FilExplorer />
+      <DragAndDrop />
       <Progress />
       <Rating />
       <PromiseAll />

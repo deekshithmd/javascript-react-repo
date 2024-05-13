@@ -19,7 +19,7 @@ export const Debouncing = () => {
         setData(e.target.value)
     }
 
-    const debounce = debouncing(handleChange, 300)
+    const debounce = debouncing(handleChange, 300);
 
     return (
         <div>

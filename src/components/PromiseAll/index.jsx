@@ -12,7 +12,7 @@ const myPromiseAll = (promiseList) => {
                     resolve(result)
                 }
             })
-                .catch(e => reject(e))
+            .catch(e => reject(e))
         })
     })
 }
