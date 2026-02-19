@@ -15,6 +15,7 @@ import { Multilanguage } from "./components/Multilanguage";
 import { StepperComponent } from "./components/StepperComponent";
 import { FilExplorer } from "./components/FileExplorer";
 import { DragAndDrop } from "./components/DragAndDrop";
+import { Virtualization } from "./components/Virtualization";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
       <StepperComponent />
       <DataStructures />
       <ProblemSolving />
+      <Virtualization renderItem={(item) => <div key={item}>{item}</div>}/>
     </div>
   );
 }
