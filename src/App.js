@@ -16,6 +16,10 @@ import { StepperComponent } from "./components/StepperComponent";
 import { FilExplorer } from "./components/FileExplorer";
 import { DragAndDrop } from "./components/DragAndDrop";
 import { Virtualization } from "./components/Virtualization";
+import { PriorityAPIResolution } from "./components/PriorityAPIResolution";
+import { Circles } from "./components/DrawCircles";
+import { VirtualToDOM } from "./components/VirtualToDom";
+import { UseEffect } from "./components/UseEffect";
 
 function App() {
   return (
@@ -37,6 +41,10 @@ function App() {
       <DataStructures />
       <ProblemSolving />
       <Virtualization renderItem={(item) => <div key={item}>{item}</div>}/>
+      <PriorityAPIResolution />
+      {/* <Circles /> */}
+      <VirtualToDOM/>
+      <UseEffect/>
     </div>
   );
 }

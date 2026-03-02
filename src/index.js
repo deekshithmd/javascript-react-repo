@@ -7,11 +7,11 @@ import "./i18n.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <React.Suspense fallback="Loading...">
       <App />
     </React.Suspense>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
