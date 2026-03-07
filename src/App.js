@@ -41,7 +41,7 @@ function App() {
       <StepperComponent />
       <DataStructures />
       <ProblemSolving />
-      <Virtualization />
+      <Virtualization renderItem={(item) => <div key={item}>{item}</div>} />
       <PriorityAPIResolution />
       <Circles />
       <VirtualToDOM />

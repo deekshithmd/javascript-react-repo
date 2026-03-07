@@ -62,12 +62,12 @@ const virtualNode = {
 export const VirtualToDOM = () => {
     const parentRef = useRef(null)
 
-    useEffect(()=>{
-        if(parentRef?.current){
-            renderToDom(virtualNode,parentRef.current)
+    useEffect(() => {
+        if (parentRef?.current) {
+            renderToDom(virtualNode, parentRef.current)
         }
 
-    },[])
+    }, [])
 
     const renderChild = (node, parent) => {
 
@@ -94,9 +94,9 @@ export const VirtualToDOM = () => {
             // To handle fragments
             const fragment = document.createDocumentFragment();
 
-            const children = node.props.children||{};
-            for(let key in children){
-                const child  = children[key];
+            const children = node.props.children || {};
+            for (let key in children) {
+                const child = children[key];
                 renderChild(child, fragment)
             }
 
@@ -143,7 +143,7 @@ export const VirtualToDOM = () => {
     return (
         <div>
             <h1>Virtual Node to Real DOM</h1>
-            <div id='root-1' ref={parentRef}/>
+            <div id='root-1' ref={parentRef} />
         </div>
     )
 }
