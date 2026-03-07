@@ -30,6 +30,7 @@ import {
   Link,
   Navigate,
 } from "react-router-dom";
+import { Typeahead } from "./components/Typeahead";
 
 const routes = [
   { path: "/multilanguage", label: "Multilanguage", element: <Multilanguage /> },
@@ -62,6 +63,7 @@ const routes = [
   { path: "/virtual-dom", label: "VirtualToDOM", element: <VirtualToDOM /> },
   { path: "/use-effect", label: "UseEffect", element: <UseEffect /> },
   { path: "/nested-comments", label: "NestedComments", element: <NestedComments /> },
+  { path: "typeahead", label: "Typeahead", element: <Typeahead /> }
 ];
 
 function Home() {
