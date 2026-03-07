@@ -20,6 +20,7 @@ import { PriorityAPIResolution } from "./components/PriorityAPIResolution";
 import { Circles } from "./components/DrawCircles";
 import { VirtualToDOM } from "./components/VirtualToDom";
 import { UseEffect } from "./components/UseEffect";
+import { NestedComments } from "./components/NestedComments";
 
 function App() {
   return (
@@ -40,11 +41,12 @@ function App() {
       <StepperComponent />
       <DataStructures />
       <ProblemSolving />
-      <Virtualization renderItem={(item) => <div key={item}>{item}</div>}/>
+      <Virtualization />
       <PriorityAPIResolution />
-      {/* <Circles /> */}
-      <VirtualToDOM/>
-      <UseEffect/>
+      <Circles />
+      <VirtualToDOM />
+      <UseEffect />
+      <NestedComments />
     </div>
   );
 }

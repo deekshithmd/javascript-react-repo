@@ -57,7 +57,6 @@ export const Debouncing = () => {
         return debounce
     }
 
-
     const handleChange = (e) => {
         console.log("value", e.target.value)
         setData(e.target.value)

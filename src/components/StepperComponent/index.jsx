@@ -61,9 +61,8 @@ export const StepperComponent = () => {
             <div
               key={step?.name}
               ref={(el) => (stepRef.current[index] = el)}
-              className={`step ${
-                currentStep > index + 1 || isComplete ? "complete" : ""
-              } ${currentStep === index + 1 ? "active" : ""}`}
+              className={`step ${currentStep > index + 1 || isComplete ? "complete" : ""
+                } ${currentStep === index + 1 ? "active" : ""}`}
             >
               <span className="step-number">
                 {currentStep > index + 1 || isComplete ? (
@@ -79,9 +78,8 @@ export const StepperComponent = () => {
         <div
           className="progressbar"
           style={{
-            width: `calc(100% - ${
-              margins?.leftMargin + margins?.rightMargin
-            }px`,
+            width: `calc(100% - ${margins?.leftMargin + margins?.rightMargin
+              }px`,
             marginLeft: `${margins?.leftMargin}px`,
             marginRight: `${margins?.rightMargin}px`,
           }}

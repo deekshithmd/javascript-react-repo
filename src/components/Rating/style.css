@@ -1,0 +1,17 @@
+.star-container {
+  display: flex;
+  gap: 10px;
+}
+
+.star-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.filled svg {
+  fill: rgb(101, 81, 2);
+  /* clip-path: inset(0 50% 0 0); */
+}
