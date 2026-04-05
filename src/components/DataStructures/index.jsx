@@ -5,6 +5,7 @@ import { LinkedListComponent } from "./LinkedList";
 import { TreeComponent } from "./Tree";
 import { GraphComponent } from "./Graph";
 import { Array } from "./Array";
+import { TwoPointers } from "./Twopointers";
 
 export const DataStructures = () => {
   return (
@@ -15,6 +16,7 @@ export const DataStructures = () => {
       <TreeComponent />
       <GraphComponent/>
       <Array/>
+      <TwoPointers/>
     </>
   );
 };
