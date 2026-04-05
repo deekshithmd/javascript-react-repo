@@ -1,0 +1,23 @@
+.bottom-right-notifications {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.bottom-right-notifiactions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.top-right-notifications {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.top-left-notifications {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
